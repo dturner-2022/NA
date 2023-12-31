@@ -9,7 +9,7 @@ const App = () =>  {
   //Idea for allocating Naruto bg images into an array
   const narutoBgs = [
     {
-      src: "Naruto0",
+      src: "Naruto1",
     },
     {
       src: "Naruto1",
