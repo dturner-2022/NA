@@ -1,5 +1,2 @@
-<<<<<<< HEAD
-/* /index.html 200 
-=======
 /* /index.html 200
->>>>>>> a1edc00706d2eb7bb6e855d0d617a221046e075e
+
