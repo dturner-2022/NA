@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { GiStarShuriken } from "react-icons/gi";
 
+
 const App = () =>  {
   //Bgs  for teams
   const [teamBg, setTeamBg] = useState("Naruto20");
@@ -9,7 +10,7 @@ const App = () =>  {
   //Idea for allocating Naruto bg images into an array
   const narutoBgs = [
     {
-      src: "Naruto1",
+      src: "Naruto0",
     },
     {
       src: "Naruto1",
@@ -161,423 +162,1830 @@ const App = () =>  {
     {
       src: "Naruto51",
     },
+    {
+      src: "Naruto52",
+    },
+    {
+      src: "Naruto53",
+    },
+    {
+      src: "Naruto54",
+    },
+    {
+      src: "Naruto55",
+    },
+    {
+      src: "Naruto56",
+    },
+    {
+      src: "Naruto57",
+    },
+    {
+      src: "Naruto59",
+    },    {
+      src: "Naruto60",
+    },    {
+      src: "Naruto61",
+    },    {
+      src: "Naruto62",
+    },    {
+      src: "Naruto63",
+    },    {
+      src: "Naruto64",
+    }, 
   ];
 
   //Idea for allocating character images into an array
-  const charImages = [
-    { charName: "Uzumaki-Naruto", charID: 0 },
-    { charName: "Haruno-Sakura", charID: 1 },
-    { charName: "Uchiha-Sasuke", charID: 2 },
-    { charName: "Inuzuka-Kiba", charID: 3 },
-    { charName: "Aburame-Shino", charID: 4 },
-    { charName: "Hyuuga-Hinata", charID: 5 },
-    { charName: "Nara-Shikamaru", charID: 6 },
-    { charName: "Akimichi-Chouji", charID: 7 },
-    { charName: "Yamanaka-Ino", charID: 8 },
-    { charName: "Rock-Lee", charID: 9 },
-    { charName: "Tenten", charID: 10 },
-    { charName: "Hyuuga-Neji", charID: 11 },
-    { charName: "Gaara", charID: 12 },
-    { charName: "Kankuro", charID: 13 },
-    { charName: "Temari", charID: 14 },
-    { charName: "Kinuta-Dosu", charID: 15 },
-    { charName: "Tsuchi-Kin", charID: 16 },
-    { charName: "Abumi-Zaku", charID: 17 },
-    { charName: "Young-Kakashi", charID: 18 },
-    { charName: "Uchiha-Obito", charID: 19 },
-    { charName: "Nohara-Rin", charID: 20 },
-    { charName: "Hyuuga-Hanabi", charID: 21 },
-    { charName: "Teuchi", charID: 22 },
-    { charName: "Young-Minato", charID: 23 },
-    { charName: "Young-Kushina", charID: 24 },
-    { charName: "Young-Itachi", charID: 25 },
-    { charName: "Young-Yahiko", charID: 26 },
-    { charName: "Young-Konan", charID: 27 },
-    { charName: "Young-Nagato", charID: 28 },
-    { charName: "Young-Kabuto", charID: 29 },
-    { charName: "Mahiru", charID: 30 },
-    { charName: "Taiseki", charID: 31 },
-    { charName: "Kakkou", charID: 32 },
-    { charName: "Anbu-Kakashi", charID: 33 },
-    { charName: "Tenzou", charID: 34 },
-    { charName: "Anbu-Itachi", charID: 35 },
-    { charName: "Corrupted-Obito", charID: 36 },
-    { charName: "Kisame-Of-The-Cypher-Division", charID: 37 },
-    { charName: "Umino-Iruka", charID: 38 },
-    { charName: "Mizuki", charID: 39 },
-    { charName: "Demon-Brothers", charID: 40 },
-    { charName: "Zori-and-Waraji", charID: 41 },
-    { charName: "Haku", charID: 42 },
-    { charName: "Momochi-Zabuza", charID: 43 },
-    { charName: "Oboro", charID: 44 },
-    { charName: "Shigure", charID: 45 },
-    { charName: "Shiore-Orochimaru", charID: 46 },
-    { charName: "Akadou-Yoroi", charID: 47 },
-    { charName: "Tsurugi-Misumi", charID: 48 },
-    { charName: "Jiroubou", charID: 49 },
-    { charName: "Kidoumaru", charID: 50 },
-    { charName: "Tayuya", charID: 51 },
-    { charName: "Sakon-and-Ukon", charID: 52 },
-    { charName: "Kimimaro", charID: 53 },
-    { charName: "Mitarashi-Anko", charID: 54 },
-    { charName: "Gekko-Hayate", charID: 55 },
-    { charName: "Shizune", charID: 56 },
-    { charName: "Hatake-Kakashi", charID: 57 },
-    { charName: "Yuhi-Kurenai", charID: 58 },
-    { charName: "Sarutobi-Asuma", charID: 59 },
-    { charName: "Maito-Gai", charID: 60 },
-    { charName: "Uzumaki-Kushina", charID: 61 },
-    { charName: "Namikaze-Minato", charID: 62 },
-    { charName: "Yashamaru", charID: 63 },
-    { charName: "Baki", charID: 64 },
-    { charName: "Yakushi-Kabuto", charID: 65 },
-    { charName: "Tsunade", charID: 66 },
-    { charName: "Jiraiya", charID: 67 },
-    { charName: "Orochimaru", charID: 68 },
-    { charName: "Edo-Tensei-Hashirama", charID: 69 },
-    { charName: "Edo-Tensei-Tobirama", charID: 70 },
-    { charName: "Sarutobi-Hiruzen", charID: 71 },
-    { charName: "Hokage-Minato", charID: 72 },
-    { charName: "Masked-Man", charID: 73 },
-    { charName: "Kyuubi-Naruto", charID: 74 },
-    { charName: "Cursed-Seal-Lv1-Sasuke", charID: 75 },
-    { charName: "Cursed-Seal-Sasuke", charID: 76 },
-    { charName: "Butterfly-Chouji", charID: 77 },
-    { charName: "Drunken-Lee", charID: 78 },
-    { charName: "Shukaku-Gaara", charID: 79 },
-    { charName: "Rehabilitated-Gaara", charID: 80 },
-    { charName: "Hoshigaki-Kisame", charID: 81 },
-    { charName: "Uchiha-Itachi", charID: 82 },
-    { charName: "Rokushou-Aoi", charID: 83 },
-    { charName: "Kurosuki-Raiga", charID: 84 },
-    { charName: "Kazahana-Doto", charID: 85 },
-    { charName: "Temujin", charID: 86 },
-    { charName: "Uzumaki-Naruto-(S)", charID: 87 },
-    { charName: "Haruno-Sakura-(S)", charID: 88 },
-    { charName: "Sai", charID: 89 },
-    { charName: "Inuzuka-Kiba-(S)", charID: 90 },
-    { charName: "Aburame-Shino-(S)", charID: 91 },
-    { charName: "Hyuuga-Hinata-(S)", charID: 92 },
-    { charName: "Nara-Shikamaru-(S)", charID: 93 },
-    { charName: "Akimichi-Chouji-(S)", charID: 94 },
-    { charName: "Yamanaka-Ino-(S)", charID: 95 },
-    { charName: "Rock-Lee-(S)", charID: 96 },
-    { charName: "Tenten-(S)", charID: 97 },
-    { charName: "Hyuuga-Neji-(S)", charID: 98 },
-    { charName: "Sarutobi-Konohamaru", charID: 99 },
-    { charName: "Hatake-Kakashi-(S)", charID: 100 },
-    { charName: "Yamato", charID: 101 },
-    { charName: "Maito-Gai-(S)", charID: 102 },
-    { charName: "Sarutobi-Asuma-(S)", charID: 103 },
-    { charName: "Ebisu", charID: 104 },
-    { charName: "Shizune-(S)", charID: 105 },
-    { charName: "Yamashiro-Aoba", charID: 106 },
-    { charName: "Mitarashi-Anko-(S)", charID: 107 },
-    { charName: "Izumo-and-Kotetsu", charID: 108 },
-    { charName: "Shiranui-Genma", charID: 109 },
-    { charName: "Namiashi-Raidou", charID: 110 },
-    { charName: "Inuzuka-Hana", charID: 111 },
-    { charName: "Inuzuka-Tsume", charID: 112 },
-    { charName: "Aburame-Shibi", charID: 113 },
-    { charName: "Hyuuga-Hiashi", charID: 114 },
-    { charName: "Nara-Shikaku", charID: 115 },
-    { charName: "Akimichi-Chouza", charID: 116 },
-    { charName: "Yamanaka-Inoichi", charID: 117 },
-    { charName: "Morino-Ibiki", charID: 118 },
-    { charName: "Zaji", charID: 119 },
-    { charName: "Nara-Ensui", charID: 120 },
-    { charName: "Yamanaka-Santa", charID: 121 },
-    { charName: "Aburame-Muta", charID: 122 },
-    { charName: "Iou", charID: 123 },
-    { charName: "Uzuki-Yugao", charID: 124 },
-    { charName: "Anbu-Captain-Squad", charID: 125 },
-    { charName: "Aburame-Torune", charID: 126 },
-    { charName: "Yamanaka-Fu", charID: 127 },
-    { charName: "Shimura-Danzo", charID: 128 },
-    { charName: "Tsunade-(S)", charID: 129 },
-    { charName: "Senju-Hashirama", charID: 130 },
-    { charName: "Senju-Tobirama", charID: 131 },
-    { charName: "Uchiha-Izuna", charID: 132 },
-    { charName: "Uchiha-Madara", charID: 133 },
-    { charName: "Uchiha-Shisui", charID: 134 },
-    { charName: "Uchiha-Fugaku", charID: 135 },
-    { charName: "Uchiha-Naori", charID: 136 },
-    { charName: "Uchiha-Naka", charID: 137 },
-    { charName: "Maito-Dai", charID: 138 },
-    { charName: "Maki", charID: 139 },
-    { charName: "Chiyo", charID: 140 },
-    { charName: "Kankuro-(S)", charID: 141 },
-    { charName: "Temari-(S)", charID: 142 },
-    { charName: "Kazekage-Gaara", charID: 143 },
-    { charName: "Ruka", charID: 144 },
-    { charName: "Ao", charID: 145 },
-    { charName: "Chojuro", charID: 146 },
-    { charName: "Terumi-Mei", charID: 147 },
-    { charName: "Akatsuchi", charID: 148 },
-    { charName: "Kurotsuchi", charID: 149 },
-    { charName: "Ittan", charID: 150 },
-    { charName: "Monga", charID: 151 },
-    { charName: "Kitsuchi", charID: 152 },
-    { charName: "Ohnoki", charID: 153 },
-    { charName: "Sabu", charID: 154 },
-    { charName: "Atsui", charID: 155 },
-    { charName: "Karui", charID: 156 },
-    { charName: "Omoi", charID: 157 },
-    { charName: "Samui", charID: 158 },
-    { charName: "Shee", charID: 159 },
-    { charName: "Darui", charID: 160 },
-    { charName: "Motoi", charID: 161 },
-    { charName: "Dodai", charID: 162 },
-    { charName: "Mabui", charID: 163 },
-    { charName: "Ay", charID: 164 },
-    { charName: "Samurai-Troops", charID: 165 },
-    { charName: "Mifune", charID: 166 },
-    { charName: "Hanzo-of-the-Salamander", charID: 167 },
-    { charName: "Ajisai", charID: 168 },
-    { charName: "Nii-Yugito", charID: 169 },
-    { charName: "Karatachi-Yagura", charID: 170 },
-    { charName: "Roshi", charID: 171 },
-    { charName: "Han", charID: 172 },
-    { charName: "Utakata", charID: 173 },
-    { charName: "Fuu", charID: 174 },
-    { charName: "Killer-Bee", charID: 175 },
-    { charName: "Hachibi-Bee", charID: 176 },
-    { charName: "Hozuki-Suigetsu", charID: 177 },
-    { charName: "Karin", charID: 178 },
-    { charName: "Juugo", charID: 179 },
-    { charName: "Cursed-Seal-Juugo", charID: 180 },
-    { charName: "Uchiha-Sasuke-(S)", charID: 181 },
-    { charName: "Cursed-Seal-Sasuke-(S)", charID: 182 },
-    { charName: "Mangekyou-Sasuke", charID: 183 },
-    { charName: "Yakushi-Kabuto-(S)", charID: 184 },
-    { charName: "Orochimaru-(S)", charID: 185 },
-    { charName: "White-Snake-Orochimaru", charID: 186 },
-    { charName: "Fukasaku-and-Shima", charID: 187 },
-    { charName: "Jiraiya-(S)", charID: 188 },
-    { charName: "Sennin-Jiraiya", charID: 189 },
-    { charName: "Sennin-Naruto", charID: 190 },
-    { charName: "Three-Tails-Kyuubi-Naruto", charID: 191 },
-    { charName: "Four-Tails-Kyuubi-Naruto", charID: 192 },
-    { charName: "Six-Tails-Kyuubi-Naruto", charID: 193 },
-    { charName: "Falls-Of-Truth", charID: 194 },
-    { charName: "Fudou", charID: 195 },
-    { charName: "Fuen", charID: 196 },
-    { charName: "Fuuka", charID: 197 },
-    { charName: "Kazuma", charID: 198 },
-    { charName: "Sora", charID: 199 },
-    { charName: "Chiriku", charID: 200 },
-    { charName: "Yuukimaru", charID: 201 },
-    { charName: "Kigiri", charID: 202 },
-    { charName: "Nurari", charID: 203 },
-    { charName: "Kihou", charID: 204 },
-    { charName: "Gozu", charID: 205 },
-    { charName: "Rinji", charID: 206 },
-    { charName: "Guren", charID: 207 },
-    { charName: "Mecha-Naruto", charID: 208 },
-    { charName: "Mecha-Kurama", charID: 209 },
-    { charName: "Satori", charID: 210 },
-    { charName: "Kisame-Body-Double", charID: 211 },
-    { charName: "Itachi-Body-Double", charID: 212 },
-    { charName: "Deidara", charID: 213 },
-    { charName: "Hiruko-Sasori", charID: 214 },
-    { charName: "Sasori-of-the-Red-Sand", charID: 215 },
-    { charName: "Puppet-Sasori", charID: 216 },
-    { charName: "Hidan", charID: 217 },
-    { charName: "Kakuzu", charID: 218 },
-    { charName: "True-Form-Kakuzu", charID: 219 },
-    { charName: "Hoshigaki-Kisame-(S)", charID: 220 },
-    { charName: "Uchiha-Itachi-(S)", charID: 221 },
-    { charName: "Biwa-Juuzou", charID: 222 },
-    { charName: "Akatsuki-Orochimaru", charID: 223 },
-    { charName: "Kyuusuke", charID: 224 },
-    { charName: "Daibutsu", charID: 225 },
-    { charName: "Yahiko", charID: 226 },
-    { charName: "Konan", charID: 227 },
-    { charName: "Konan-of-the-Rain", charID: 228 },
-    { charName: "Uzumaki-Nagato", charID: 229 },
-    { charName: "Animal-Path-Pain", charID: 230 },
-    { charName: "Female-Animal-Path-Pain", charID: 231 },
-    { charName: "Asura-Path-Pain", charID: 232 },
-    { charName: "Human-Path-Pain", charID: 233 },
-    { charName: "Naraka-Path-Pain", charID: 234 },
-    { charName: "Preta-Path-Pain", charID: 235 },
-    { charName: "Deva-Path-Pain", charID: 236 },
-    { charName: "White-Zetsu", charID: 237 },
-    { charName: "Black-Zetsu", charID: 238 },
-    { charName: "Tobi", charID: 239 },
-    { charName: "Akatsuki-Sasuke", charID: 240 },
-    { charName: "Edo-Tensei-Asuma", charID: 241 },
-    { charName: "Edo-Tensei-Dan", charID: 242 },
-    { charName: "Edo-Tensei-Hizashi", charID: 243 },
-    { charName: "Edo-Tensei-Shin", charID: 244 },
-    { charName: "Edo-Tensei-Hayate", charID: 245 },
-    { charName: "Edo-Tensei-Torune", charID: 246 },
-    { charName: "Edo-Tensei-Ginkaku", charID: 247 },
-    { charName: "Edo-Tensei-Kinkaku", charID: 248 },
-    { charName: "Edo-Tensei-Kyuubi-Kinkaku", charID: 249 },
-    { charName: "Edo-Tensei-Pakura", charID: 250 },
-    { charName: "Edo-Tensei-Gari", charID: 251 },
-    { charName: "Edo-Tensei-Fukai", charID: 252 },
-    { charName: "Edo-Tensei-Hanzo", charID: 253 },
-    { charName: "Edo-Tensei-Chiyo", charID: 254 },
-    { charName: "Edo-Tensei-Chukichi", charID: 255 },
-    { charName: "Edo-Tensei-Toroi", charID: 256 },
-    { charName: "Edo-Tensei-Chen", charID: 257 },
-    { charName: "Edo-Tensei-Yota", charID: 258 },
-    { charName: "Edo-Tensei-Tatewaki", charID: 259 },
-    { charName: "Edo-Tensei-Heiji", charID: 260 },
-    { charName: "Edo-Tensei-Daimaru", charID: 261 },
-    { charName: "Edo-Tensei-Chuukaku", charID: 262 },
-    { charName: "Edo-Tensei-Sand-Jester-Nin", charID: 263 },
-    { charName: "Edo-Tensei-Cloud-Plague-Nin", charID: 264 },
-    { charName: "Edo-Tensei-Jiroubou", charID: 265 },
-    { charName: "Edo-Tensei-Kidoumaru", charID: 266 },
-    { charName: "Edo-Tensei-Tayuya", charID: 267 },
-    { charName: "Edo-Tensei-Sakon-and-Ukon", charID: 268 },
-    { charName: "Edo-Tensei-Kimimaro", charID: 269 },
-    { charName: "Edo-Tensei-Haku", charID: 270 },
-    { charName: "Edo-Tensei-Zabuza", charID: 271 },
-    { charName: "Edo-Tensei-Jinin", charID: 272 },
-    { charName: "Edo-Tensei-Ameyuri", charID: 273 },
-    { charName: "Edo-Tensei-Kushimaru", charID: 274 },
-    { charName: "Edo-Tensei-Jinpachi", charID: 275 },
-    { charName: "Edo-Tensei-Fuguki", charID: 276 },
-    { charName: "Edo-Tensei-Mangetsu", charID: 277 },
-    { charName: "Edo-Tensei-Sandaime-Kazekage", charID: 278 },
-    { charName: "Edo-Tensei-Rasa", charID: 279 },
-    { charName: "Edo-Tensei-Ay", charID: 280 },
-    { charName: "Edo-Tensei-Muu", charID: 281 },
-    { charName: "Edo-Tensei-Gengetsu", charID: 282 },
-    { charName: "Edo-Tensei-Deidara", charID: 283 },
-    { charName: "Edo-Tensei-Sasori", charID: 284 },
-    { charName: "Edo-Tensei-Kakuzu", charID: 285 },
-    { charName: "Edo-Tensei-Nagato", charID: 286 },
-    { charName: "Edo-Tensei-Itachi", charID: 287 },
-    { charName: "Edo-Tensei-Yugito", charID: 288 },
-    { charName: "Edo-Tensei-Yagura", charID: 289 },
-    { charName: "Edo-Tensei-Roshi", charID: 290 },
-    { charName: "Edo-Tensei-Han", charID: 291 },
-    { charName: "Edo-Tensei-Utakata", charID: 292 },
-    { charName: "Edo-Tensei-Fuu", charID: 293 },
-    { charName: "Edo-Tensei-Hashirama-(S)", charID: 294 },
-    { charName: "Edo-Tensei-Tobirama-(S)", charID: 295 },
-    { charName: "Edo-Tensei-Hiruzen", charID: 296 },
-    { charName: "Edo-Tensei-Minato", charID: 297 },
-    { charName: "Edo-Tensei-Kyuubi-Minato", charID: 298 },
-    { charName: "Edo-Tensei-Madara", charID: 299 },
-    { charName: "Kyuubi-Naruto-(S)", charID: 300 },
-    { charName: "Sennin-Kyuubi-Naruto", charID: 301 },
-    { charName: "Eternal-Mangekyou-Sasuke", charID: 302 },
-    { charName: "Byakugou-Sakura", charID: 303 },
-    { charName: "Emotional-Energy-Sai", charID: 304 },
-    { charName: "Commander-Kakashi", charID: 305 },
-    { charName: "Butterfly-Chouji-(S)", charID: 306 },
-    { charName: "Commander-Gaara", charID: 307 },
-    { charName: "Captain-Kankuro", charID: 308 },
-    { charName: "Captain-Temari", charID: 309 },
-    { charName: "Samehada-Bee", charID: 310 },
-    { charName: "White-Snake-Kabuto", charID: 311 },
-    { charName: "Sennin-Kabuto", charID: 312 },
-    { charName: "Rinnegan-Tobi", charID: 313 },
-    { charName: "Uchiha-Obito-(S)", charID: 314 },
-    { charName: "Guruguru", charID: 315 },
-    { charName: "Regenerated-Madara", charID: 316 },
-    { charName: "Juubi", charID: 317 },
-    { charName: "Rikudou-Obito", charID: 318 },
-    { charName: "Rikudou-Madara", charID: 319 },
-    { charName: "Eighth-Gate-Gai", charID: 320 },
-    { charName: "Rikudou-Naruto", charID: 321 },
-    { charName: "Rinnegan-Sasuke", charID: 322 },
-    { charName: "Dual-Mangekyou-Kakashi", charID: 323 },
-    { charName: "Rehabilitated-Obito", charID: 324 },
-    { charName: "Ootsutsuki-Kaguya", charID: 325 },
-    { charName: "Ootsutsuki-Hamura", charID: 326 },
-    { charName: "Ootsutsuki-Hagoromo", charID: 327 },
-    { charName: "Ootsutsuki-Ashura", charID: 328 },
-    { charName: "Ootsutsuki-Indra", charID: 329 },
-    { charName: "Ootsutsuki-Toneri", charID: 330 },
-    { charName: "Uzumaki-Boruto", charID: 331 },
-    { charName: "Uchiha-Sarada", charID: 332 },
-    { charName: "Mitsuki", charID: 333 },
-    { charName: "Nara-Shikadai", charID: 334 },
-    { charName: "Akimichi-Chouchou", charID: 335 },
-    { charName: "Yamanaka-Inojin", charID: 336 },
-    { charName: "Metal-Lee", charID: 337 },
-    { charName: "Yuino-Iwabee", charID: 338 },
-    { charName: "Kaminarimon-Denki", charID: 339 },
-    { charName: "Kakei-Sumire", charID: 340 },
-    { charName: "Izuno-Wasabi", charID: 341 },
-    { charName: "Suzumeno-Namida", charID: 342 },
-    { charName: "Kurogane-Tsubaki", charID: 343 },
-    { charName: "Taketori-Houki", charID: 344 },
-    { charName: "Kokubou-Renga", charID: 345 },
-    { charName: "Kuroi-Hako", charID: 346 },
-    { charName: "Shinki-of-the-Iron-Sand", charID: 347 },
-    { charName: "Araya", charID: 348 },
-    { charName: "Yodo", charID: 349 },
-    { charName: "Yurui", charID: 350 },
-    { charName: "Tarui", charID: 351 },
-    { charName: "Toroi", charID: 352 },
-    { charName: "Uzumaki-Himawari", charID: 353 },
-    { charName: "Kawaki", charID: 354 },
-    { charName: "Sarutobi-Mirai", charID: 355 },
-    { charName: "Sarutobi-Konohamaru-(B)", charID: 356 },
-    { charName: "Ise-Udon", charID: 357 },
-    { charName: "Kazamatsuri-Moegi", charID: 358 },
-    { charName: "Hyuuga-Hanabi-(B)", charID: 359 },
-    { charName: "Mugino", charID: 360 },
-    { charName: "Touno-Katasuke", charID: 361 },
-    { charName: "Mitarashi-Anko-(B)", charID: 362 },
-    { charName: "Hokage-Naruto", charID: 363 },
-    { charName: "Uchiha-Sasuke-(B)", charID: 364 },
-    { charName: "Uchiha-Sakura", charID: 365 },
-    { charName: "Yamanaka-Sai", charID: 366 },
-    { charName: "Hatake-Kakashi-(B)", charID: 367 },
-    { charName: "Aburame-Shino-(B)", charID: 368 },
-    { charName: "Nara-Shikamaru-(B)", charID: 369 },
-    { charName: "Akimichi-Chouji-(B)", charID: 370 },
-    { charName: "Yamanaka-Ino-(B)", charID: 371 },
-    { charName: "Rock-Lee-(B)", charID: 372 },
-    { charName: "Tenten-(B)", charID: 373 },
-    { charName: "Hyuuga-Hiashi-(B)", charID: 374 },
-    { charName: "Kazekage-Gaara-(B)", charID: 375 },
-    { charName: "Kankuro-(B)", charID: 376 },
-    { charName: "Nara-Temari", charID: 377 },
-    { charName: "Mizukage-Chojuro", charID: 378 },
-    { charName: "Tsuchikage-Kurotsuchi", charID: 379 },
-    { charName: "Raikage-Darui", charID: 380 },
-    { charName: "Akimichi-Karui", charID: 381 },
-    { charName: "Omoi-(B)", charID: 382 },
-    { charName: "Orochimaru-(B)", charID: 383 },
-    { charName: "Shin-Clone", charID: 384 },
-    { charName: "Uchiha-Shin", charID: 385 },
-    { charName: "Shojoji-Of-The-Corpse-Clone", charID: 386 },
-    { charName: "Ootsutsuki-Urashiki", charID: 387 },
-    { charName: "Chakra-Fruit-Urashiki", charID: 388 },
-    { charName: "Ootsutsuki-Kinshiki", charID: 389 },
-    { charName: "Ootsutsuki-Momoshiki", charID: 390 },
-    { charName: "Chakra-Fruit-Momoshiki", charID: 391 },
-    { charName: "Karma-Boruto", charID: 392 },
-    { charName: "Ootsutsuki-Boruto", charID: 393 },
-    { charName: "Karma-Kawaki", charID: 394 },
-    { charName: "Restored-Karma-Kawaki", charID: 395 },
-    { charName: "Sennin-Mitsuki", charID: 396 },
-    { charName: "Shigaraki-Sumire", charID: 397 },
-    { charName: "Baryon-Naruto", charID: 398 },
-    { charName: "Ao-(B)", charID: 399 },
-    { charName: "Garou", charID: 400 },
-    { charName: "Victor", charID: 401 },
-    { charName: "Deepa", charID: 402 },
-    { charName: "Delta", charID: 403 },
-    { charName: "Kashin-Koji", charID: 404 },
-    { charName: "Sennin-Koji", charID: 405 },
-    { charName: "Boro", charID: 406 },
-    { charName: "Rampage-Boro", charID: 407 },
-    { charName: "Sanzu-Amado", charID: 408 },
-    { charName: "Jigen", charID: 409 },
-    { charName: "Ootsutsuki-Isshiki", charID: 410 },
-    { charName: "Code", charID: 411 },
-    { charName: "Santa-Claus", charID: 412 },
+  const charImages = [ {
+    "charName": "Uzumaki-Naruto",
+    "charId": 0
+},
+{
+    "charName": "Haruno-Sakura",
+    "charId": 1
+},
+{
+    "charName": "Uchiha-Sasuke",
+    "charId": 2
+},
+{
+    "charName": "Inuzuka-Kiba",
+    "charId": 3
+},
+{
+    "charName": "Aburame-Shino",
+    "charId": 4
+},
+{
+    "charName": "Hyuuga-Hinata",
+    "charId": 5
+},
+{
+    "charName": "Nara-Shikamaru",
+    "charId": 6
+},
+{
+    "charName": "Akimichi-Chouji",
+    "charId": 7
+},
+{
+    "charName": "Yamanaka-Ino",
+    "charId": 8
+},
+{
+    "charName": "Rock-Lee",
+    "charId": 9
+},
+{
+    "charName": "Tenten",
+    "charId": 10
+},
+{
+    "charName": "Hyuuga-Neji",
+    "charId": 11
+},
+{
+    "charName": "Gaara",
+    "charId": 12
+},
+{
+    "charName": "Kankuro",
+    "charId": 13
+},
+{
+    "charName": "Temari",
+    "charId": 14
+},
+{
+    "charName": "Kinuta-Dosu",
+    "charId": 15
+},
+{
+    "charName": "Tsuchi-Kin",
+    "charId": 16
+},
+{
+    "charName": "Abumi-Zaku",
+    "charId": 17
+},
+{
+    "charName": "Young-Kakashi",
+    "charId": 18
+},
+{
+    "charName": "Uchiha-Obito",
+    "charId": 19
+},
+{
+    "charName": "Nohara-Rin",
+    "charId": 20
+},
+{
+    "charName": "Hyuuga-Hanabi",
+    "charId": 21
+},
+{
+    "charName": "Teuchi",
+    "charId": 22
+},
+{
+    "charName": "Young-Minato",
+    "charId": 23
+},
+{
+    "charName": "Young-Kushina",
+    "charId": 24
+},
+{
+    "charName": "Young-Itachi",
+    "charId": 25
+},
+{
+    "charName": "Young-Yahiko",
+    "charId": 26
+},
+{
+    "charName": "Young-Konan",
+    "charId": 27
+},
+{
+    "charName": "Young-Nagato",
+    "charId": 28
+},
+{
+    "charName": "Young-Kabuto",
+    "charId": 29
+},
+{
+    "charName": "Mahiru",
+    "charId": 30
+},
+{
+    "charName": "Taiseki",
+    "charId": 31
+},
+{
+    "charName": "Kakkou",
+    "charId": 32
+},
+{
+    "charName": "Anbu-Kakashi",
+    "charId": 33
+},
+{
+    "charName": "Tenzou",
+    "charId": 34
+},
+{
+    "charName": "Anbu-Itachi",
+    "charId": 35
+},
+{
+    "charName": "Corrupted-Obito",
+    "charId": 36
+},
+{
+    "charName": "Kisame-Of-The-Cypher-Division",
+    "charId": 37
+},
+{
+    "charName": "Jounin-Tsunade",
+    "charId": 38
+},
+{
+    "charName": "Jounin-Jiraya",
+    "charId": 39
+},
+{
+    "charName": "Jounin-Orochimaru",
+    "charId": 40
+},
+{
+    "charName": "Umino-Iruka",
+    "charId": 41
+},
+{
+    "charName": "Mizuki",
+    "charId": 42
+},
+{
+    "charName": "Demon-Brothers",
+    "charId": 43
+},
+{
+    "charName": "Zori-and-Waraji",
+    "charId": 44
+},
+{
+    "charName": "Gatou",
+    "charId": 45
+},
+{
+    "charName": "Haku",
+    "charId": 46
+},
+{
+    "charName": "Momochi-Zabuza",
+    "charId": 47
+},
+{
+    "charName": "Oboro",
+    "charId": 48
+},
+{
+    "charName": "Shigure",
+    "charId": 49
+},
+{
+    "charName": "Shiore-Orochimaru",
+    "charId": 50
+},
+{
+    "charName": "Akadou-Yoroi",
+    "charId": 51
+},
+{
+    "charName": "Tsurugi-Misumi",
+    "charId": 52
+},
+{
+    "charName": "Jiroubou",
+    "charId": 53
+},
+{
+    "charName": "Kidoumaru",
+    "charId": 54
+},
+{
+    "charName": "Tayuya",
+    "charId": 55
+},
+{
+    "charName": "Sakon-and-Ukon",
+    "charId": 56
+},
+{
+    "charName": "Kimimaro",
+    "charId": 57
+},
+{
+    "charName": "Mitarashi-Anko",
+    "charId": 58
+},
+{
+    "charName": "Gekko-Hayate",
+    "charId": 59
+},
+{
+    "charName": "Shizune",
+    "charId": 60
+},
+{
+    "charName": "Hatake-Kakashi",
+    "charId": 61
+},
+{
+    "charName": "Yuhi-Kurenai",
+    "charId": 62
+},
+{
+    "charName": "Sarutobi-Asuma",
+    "charId": 63
+},
+{
+    "charName": "Maito-Gai",
+    "charId": 64
+},
+{
+    "charName": "Uzumaki-Kushina",
+    "charId": 65
+},
+{
+    "charName": "Namikaze-Minato",
+    "charId": 66
+},
+{
+    "charName": "Yashamaru",
+    "charId": 67
+},
+{
+    "charName": "Baki",
+    "charId": 68
+},
+{
+    "charName": "Yakushi-Kabuto",
+    "charId": 69
+},
+{
+    "charName": "Tsunade",
+    "charId": 70
+},
+{
+    "charName": "Jiraiya",
+    "charId": 71
+},
+{
+    "charName": "Orochimaru",
+    "charId": 72
+},
+{
+    "charName": "Edo-Tensei-Hashirama",
+    "charId": 73
+},
+{
+    "charName": "Edo-Tensei-Tobirama",
+    "charId": 74
+},
+{
+    "charName": "Sarutobi-Hiruzen",
+    "charId": 75
+},
+{
+    "charName": "Hokage-Minato",
+    "charId": 76
+},
+{
+    "charName": "Masked-Man",
+    "charId": 77
+},
+{
+    "charName": "Kyuubi-Naruto",
+    "charId": 78
+},
+{
+    "charName": "Cursed-Seal-Lv1-Sasuke",
+    "charId": 79
+},
+{
+    "charName": "Cursed-Seal-Sasuke",
+    "charId": 80
+},
+{
+    "charName": "Butterfly-Chouji",
+    "charId": 81
+},
+{
+    "charName": "Drunken-Lee",
+    "charId": 82
+},
+{
+    "charName": "Shukaku-Gaara",
+    "charId": 83
+},
+{
+    "charName": "Rehabilitated-Gaara",
+    "charId": 84
+},
+{
+    "charName": "Hoshigaki-Kisame",
+    "charId": 85
+},
+{
+    "charName": "Uchiha-Itachi",
+    "charId": 86
+},
+{
+    "charName": "Rokushou-Aoi",
+    "charId": 87
+},
+{
+    "charName": "Kurosuki-Raiga",
+    "charId": 88
+},
+{
+    "charName": "Rouga-Nadare",
+    "charId": 89
+},
+{
+    "charName": "Kakuyoku-Fubuki",
+    "charId": 90
+},
+{
+    "charName": "Fuyukuma-Mizore",
+    "charId": 91
+},
+{
+    "charName": "Kazahana-Doto",
+    "charId": 92
+},
+{
+    "charName": "Temujin",
+    "charId": 93
+},
+{
+    "charName": "Haido",
+    "charId": 94
+},
+{
+    "charName": "Uzumaki-Naruto-(S)",
+    "charId": 95
+},
+{
+    "charName": "Haruno-Sakura-(S)",
+    "charId": 96
+},
+{
+    "charName": "Sai",
+    "charId": 97
+},
+{
+    "charName": "Inuzuka-Kiba-(S)",
+    "charId": 98
+},
+{
+    "charName": "Aburame-Shino-(S)",
+    "charId": 99
+},
+{
+    "charName": "Hyuuga-Hinata-(S)",
+    "charId": 100
+},
+{
+    "charName": "Nara-Shikamaru-(S)",
+    "charId": 101
+},
+{
+    "charName": "Akimichi-Chouji-(S)",
+    "charId": 102
+},
+{
+    "charName": "Yamanaka-Ino-(S)",
+    "charId": 103
+},
+{
+    "charName": "Rock-Lee-(S)",
+    "charId": 104
+},
+{
+    "charName": "Tenten-(S)",
+    "charId": 105
+},
+{
+    "charName": "Hyuuga-Neji-(S)",
+    "charId": 106
+},
+{
+    "charName": "Sarutobi-Konohamaru",
+    "charId": 107
+},
+{
+    "charName": "Hatake-Kakashi-(S)",
+    "charId": 108
+},
+{
+    "charName": "Yamato",
+    "charId": 109
+},
+{
+    "charName": "Maito-Gai-(S)",
+    "charId": 110
+},
+{
+    "charName": "Sarutobi-Asuma-(S)",
+    "charId": 111
+},
+{
+    "charName": "Umino-Iruka-(S)",
+    "charId": 112
+},
+{
+    "charName": "Ebisu",
+    "charId": 113
+},
+{
+    "charName": "Shizune-(S)",
+    "charId": 114
+},
+{
+    "charName": "Yamashiro-Aoba",
+    "charId": 115
+},
+{
+    "charName": "Mitarashi-Anko-(S)",
+    "charId": 116
+},
+{
+    "charName": "Izumo-and-Kotetsu",
+    "charId": 117
+},
+{
+    "charName": "Shiranui-Genma",
+    "charId": 118
+},
+{
+    "charName": "Namiashi-Raidou",
+    "charId": 119
+},
+{
+    "charName": "Inuzuka-Hana",
+    "charId": 120
+},
+{
+    "charName": "Inuzuka-Tsume",
+    "charId": 121
+},
+{
+    "charName": "Aburame-Shibi",
+    "charId": 122
+},
+{
+    "charName": "Hyuuga-Hiashi",
+    "charId": 123
+},
+{
+    "charName": "Nara-Shikaku",
+    "charId": 124
+},
+{
+    "charName": "Akimichi-Chouza",
+    "charId": 125
+},
+{
+    "charName": "Yamanaka-Inoichi",
+    "charId": 126
+},
+{
+    "charName": "Morino-Ibiki",
+    "charId": 127
+},
+{
+    "charName": "Zaji",
+    "charId": 128
+},
+{
+    "charName": "Nara-Ensui",
+    "charId": 129
+},
+{
+    "charName": "Yamanaka-Santa",
+    "charId": 130
+},
+{
+    "charName": "Aburame-Muta",
+    "charId": 131
+},
+{
+    "charName": "Hyuuga-Tokuma",
+    "charId": 132
+},
+{
+    "charName": "Iou",
+    "charId": 133
+},
+{
+    "charName": "Uzuki-Yugao",
+    "charId": 134
+},
+{
+    "charName": "Anbu-Captain-Squad",
+    "charId": 135
+},
+{
+    "charName": "Aburame-Torune",
+    "charId": 136
+},
+{
+    "charName": "Yamanaka-Fu",
+    "charId": 137
+},
+{
+    "charName": "Shimura-Danzo",
+    "charId": 138
+},
+{
+    "charName": "Tsunade-(S)",
+    "charId": 139
+},
+{
+    "charName": "Senju-Hashirama",
+    "charId": 140
+},
+{
+    "charName": "Senju-Tobirama",
+    "charId": 141
+},
+{
+    "charName": "Uchiha-Izuna",
+    "charId": 142
+},
+{
+    "charName": "Uchiha-Madara",
+    "charId": 143
+},
+{
+    "charName": "Uchiha-Shisui",
+    "charId": 144
+},
+{
+    "charName": "Uchiha-Fugaku",
+    "charId": 145
+},
+{
+    "charName": "Uchiha-Naori",
+    "charId": 146
+},
+{
+    "charName": "Uchiha-Naka",
+    "charId": 147
+},
+{
+    "charName": "Maito-Dai",
+    "charId": 148
+},
+{
+    "charName": "Shira",
+    "charId": 149
+},
+{
+    "charName": "Maki",
+    "charId": 150
+},
+{
+    "charName": "Chiyo",
+    "charId": 151
+},
+{
+    "charName": "Kankuro-(S)",
+    "charId": 152
+},
+{
+    "charName": "Temari-(S)",
+    "charId": 153
+},
+{
+    "charName": "Kazekage-Gaara",
+    "charId": 154
+},
+{
+    "charName": "Ruka",
+    "charId": 155
+},
+{
+    "charName": "Ao",
+    "charId": 156
+},
+{
+    "charName": "Chojuro",
+    "charId": 157
+},
+{
+    "charName": "Terumi-Mei",
+    "charId": 158
+},
+{
+    "charName": "Akatsuchi",
+    "charId": 159
+},
+{
+    "charName": "Kurotsuchi",
+    "charId": 160
+},
+{
+    "charName": "Ittan",
+    "charId": 161
+},
+{
+    "charName": "Monga",
+    "charId": 162
+},
+{
+    "charName": "Kitsuchi",
+    "charId": 163
+},
+{
+    "charName": "Ohnoki",
+    "charId": 164
+},
+{
+    "charName": "Sabu",
+    "charId": 165
+},
+{
+    "charName": "Atsui",
+    "charId": 166
+},
+{
+    "charName": "Karui",
+    "charId": 167
+},
+{
+    "charName": "Omoi",
+    "charId": 168
+},
+{
+    "charName": "Samui",
+    "charId": 169
+},
+{
+    "charName": "Shee",
+    "charId": 170
+},
+{
+    "charName": "Darui",
+    "charId": 171
+},
+{
+    "charName": "Motoi",
+    "charId": 172
+},
+{
+    "charName": "Furui",
+    "charId": 173
+},
+{
+    "charName": "Dodai",
+    "charId": 174
+},
+{
+    "charName": "Mabui",
+    "charId": 175
+},
+{
+    "charName": "Ay",
+    "charId": 176
+},
+{
+    "charName": "Samurai-Troops",
+    "charId": 177
+},
+{
+    "charName": "Mifune",
+    "charId": 178
+},
+{
+    "charName": "Hanzo-Of-The-Salamander",
+    "charId": 179
+},
+{
+    "charName": "Ajisai",
+    "charId": 180
+},
+{
+    "charName": "Nii-Yugito",
+    "charId": 181
+},
+{
+    "charName": "Karatachi-Yagura",
+    "charId": 182
+},
+{
+    "charName": "Roshi",
+    "charId": 183
+},
+{
+    "charName": "Han",
+    "charId": 184
+},
+{
+    "charName": "Utakata",
+    "charId": 185
+},
+{
+    "charName": "Fuu",
+    "charId": 186
+},
+{
+    "charName": "Killer-Bee",
+    "charId": 187
+},
+{
+    "charName": "Hachibi-Bee",
+    "charId": 188
+},
+{
+    "charName": "Hozuki-Suigetsu",
+    "charId": 189
+},
+{
+    "charName": "Karin",
+    "charId": 190
+},
+{
+    "charName": "Juugo",
+    "charId": 191
+},
+{
+    "charName": "Cursed-Seal-Juugo",
+    "charId": 192
+},
+{
+    "charName": "Uchiha-Sasuke-(S)",
+    "charId": 193
+},
+{
+    "charName": "Cursed-Seal-Sasuke-(S)",
+    "charId": 194
+},
+{
+    "charName": "Mangekyou-Sasuke",
+    "charId": 195
+},
+{
+    "charName": "Yakushi-Kabuto-(S)",
+    "charId": 196
+},
+{
+    "charName": "Orochimaru-(S)",
+    "charId": 197
+},
+{
+    "charName": "White-Snake-Orochimaru",
+    "charId": 198
+},
+{
+    "charName": "Fukasaku-and-Shima",
+    "charId": 199
+},
+{
+    "charName": "Jiraiya-(S)",
+    "charId": 200
+},
+{
+    "charName": "Sennin-Jiraiya",
+    "charId": 201
+},
+{
+    "charName": "Sennin-Naruto",
+    "charId": 202
+},
+{
+    "charName": "Three-Tails-Kyuubi-Naruto",
+    "charId": 203
+},
+{
+    "charName": "Four-Tails-Kyuubi-Naruto",
+    "charId": 204
+},
+{
+    "charName": "Six-Tails-Kyuubi-Naruto",
+    "charId": 205
+},
+{
+    "charName": "Falls-Of-Truth",
+    "charId": 206
+},
+{
+    "charName": "Fudou",
+    "charId": 207
+},
+{
+    "charName": "Fuen",
+    "charId": 208
+},
+{
+    "charName": "Fuuka",
+    "charId": 209
+},
+{
+    "charName": "Kazuma",
+    "charId": 210
+},
+{
+    "charName": "Sora",
+    "charId": 211
+},
+{
+    "charName": "Kyuubi-Sora",
+    "charId": 212
+},
+{
+    "charName": "Chiriku",
+    "charId": 213
+},
+{
+    "charName": "Yuukimaru",
+    "charId": 214
+},
+{
+    "charName": "Kigiri",
+    "charId": 215
+},
+{
+    "charName": "Nurari",
+    "charId": 216
+},
+{
+    "charName": "Kihou",
+    "charId": 217
+},
+{
+    "charName": "Gozu",
+    "charId": 218
+},
+{
+    "charName": "Rinji",
+    "charId": 219
+},
+{
+    "charName": "Guren",
+    "charId": 220
+},
+{
+    "charName": "Mecha-Naruto",
+    "charId": 221
+},
+{
+    "charName": "Mecha-Kurama",
+    "charId": 222
+},
+{
+    "charName": "Shizuka",
+    "charId": 223
+},
+{
+    "charName": "Satori",
+    "charId": 224
+},
+{
+    "charName": "Kisame-Body-Double",
+    "charId": 225
+},
+{
+    "charName": "Itachi-Body-Double",
+    "charId": 226
+},
+{
+    "charName": "Deidara",
+    "charId": 227
+},
+{
+    "charName": "Hiruko-Sasori",
+    "charId": 228
+},
+{
+    "charName": "Sasori-Of-The-Red-Sand",
+    "charId": 229
+},
+{
+    "charName": "Puppet-Sasori",
+    "charId": 230
+},
+{
+    "charName": "Hidan",
+    "charId": 231
+},
+{
+    "charName": "Kakuzu",
+    "charId": 232
+},
+{
+    "charName": "True-Form-Kakuzu",
+    "charId": 233
+},
+{
+    "charName": "Hoshigaki-Kisame-(S)",
+    "charId": 234
+},
+{
+    "charName": "Uchiha-Itachi-(S)",
+    "charId": 235
+},
+{
+    "charName": "Biwa-Juuzou",
+    "charId": 236
+},
+{
+    "charName": "Akatsuki-Orochimaru",
+    "charId": 237
+},
+{
+    "charName": "Kyuusuke",
+    "charId": 238
+},
+{
+    "charName": "Daibutsu",
+    "charId": 239
+},
+{
+    "charName": "Yahiko",
+    "charId": 240
+},
+{
+    "charName": "Konan",
+    "charId": 241
+},
+{
+    "charName": "Konan-Of-The-Rain",
+    "charId": 242
+},
+{
+    "charName": "Uzumaki-Nagato",
+    "charId": 243
+},
+{
+    "charName": "Animal-Path-Pain",
+    "charId": 244
+},
+{
+    "charName": "Female-Animal-Path-Pain",
+    "charId": 245
+},
+{
+    "charName": "Asura-Path-Pain",
+    "charId": 246
+},
+{
+    "charName": "Human-Path-Pain",
+    "charId": 247
+},
+{
+    "charName": "Naraka-Path-Pain",
+    "charId": 248
+},
+{
+    "charName": "Preta-Path-Pain",
+    "charId": 249
+},
+{
+    "charName": "Deva-Path-Pain",
+    "charId": 250
+},
+{
+    "charName": "White-Zetsu",
+    "charId": 251
+},
+{
+    "charName": "Black-Zetsu",
+    "charId": 252
+},
+{
+    "charName": "Tobi",
+    "charId": 253
+},
+{
+    "charName": "Akatsuki-Sasuke",
+    "charId": 254
+},
+{
+    "charName": "Edo-Tensei-Asuma",
+    "charId": 255
+},
+{
+    "charName": "Edo-Tensei-Dan",
+    "charId": 256
+},
+{
+    "charName": "Edo-Tensei-Hizashi",
+    "charId": 257
+},
+{
+    "charName": "Edo-Tensei-Shin",
+    "charId": 258
+},
+{
+    "charName": "Edo-Tensei-Hayate",
+    "charId": 259
+},
+{
+    "charName": "Edo-Tensei-Torune",
+    "charId": 260
+},
+{
+    "charName": "Edo-Tensei-Ginkaku",
+    "charId": 261
+},
+{
+    "charName": "Edo-Tensei-Kinkaku",
+    "charId": 262
+},
+{
+    "charName": "Edo-Tensei-Kyuubi-Kinkaku",
+    "charId": 263
+},
+{
+    "charName": "Edo-Tensei-Pakura",
+    "charId": 264
+},
+{
+    "charName": "Edo-Tensei-Gari",
+    "charId": 265
+},
+{
+    "charName": "Edo-Tensei-Fukai",
+    "charId": 266
+},
+{
+    "charName": "Edo-Tensei-Hanzo",
+    "charId": 267
+},
+{
+    "charName": "Edo-Tensei-Chiyo",
+    "charId": 268
+},
+{
+    "charName": "Edo-Tensei-Chukichi",
+    "charId": 269
+},
+{
+    "charName": "Edo-Tensei-Toroi",
+    "charId": 270
+},
+{
+    "charName": "Edo-Tensei-Chen",
+    "charId": 271
+},
+{
+    "charName": "Edo-Tensei-Yota",
+    "charId": 272
+},
+{
+    "charName": "Edo-Tensei-Tatewaki",
+    "charId": 273
+},
+{
+    "charName": "Edo-Tensei-Heiji",
+    "charId": 274
+},
+{
+    "charName": "Edo-Tensei-Daimaru",
+    "charId": 275
+},
+{
+    "charName": "Edo-Tensei-Chuukaku",
+    "charId": 276
+},
+{
+    "charName": "Edo-Tensei-Sand-Jester-Nin",
+    "charId": 277
+},
+{
+    "charName": "Edo-Tensei-Cloud-Plague-Nin",
+    "charId": 278
+},
+{
+    "charName": "Edo-Tensei-Jiroubou",
+    "charId": 279
+},
+{
+    "charName": "Edo-Tensei-Kidoumaru",
+    "charId": 280
+},
+{
+    "charName": "Edo-Tensei-Tayuya",
+    "charId": 281
+},
+{
+    "charName": "Edo-Tensei-Sakon-and-Ukon",
+    "charId": 282
+},
+{
+    "charName": "Edo-Tensei-Kimimaro",
+    "charId": 283
+},
+{
+    "charName": "Edo-Tensei-Haku",
+    "charId": 284
+},
+{
+    "charName": "Edo-Tensei-Zabuza",
+    "charId": 285
+},
+{
+    "charName": "Edo-Tensei-Jinin",
+    "charId": 286
+},
+{
+    "charName": "Edo-Tensei-Ameyuri",
+    "charId": 287
+},
+{
+    "charName": "Edo-Tensei-Kushimaru",
+    "charId": 288
+},
+{
+    "charName": "Edo-Tensei-Jinpachi",
+    "charId": 289
+},
+{
+    "charName": "Edo-Tensei-Fuguki",
+    "charId": 290
+},
+{
+    "charName": "Edo-Tensei-Mangetsu",
+    "charId": 291
+},
+{
+    "charName": "Edo-Tensei-Sandaime-Kazekage",
+    "charId": 292
+},
+{
+    "charName": "Edo-Tensei-Rasa",
+    "charId": 293
+},
+{
+    "charName": "Edo-Tensei-Ay",
+    "charId": 294
+},
+{
+    "charName": "Edo-Tensei-Muu",
+    "charId": 295
+},
+{
+    "charName": "Edo-Tensei-Gengetsu",
+    "charId": 296
+},
+{
+    "charName": "Edo-Tensei-Deidara",
+    "charId": 297
+},
+{
+    "charName": "Edo-Tensei-Sasori",
+    "charId": 298
+},
+{
+    "charName": "Edo-Tensei-Kakuzu",
+    "charId": 299
+},
+{
+    "charName": "Edo-Tensei-Nagato",
+    "charId": 300
+},
+{
+    "charName": "Edo-Tensei-Itachi",
+    "charId": 301
+},
+{
+    "charName": "Edo-Tensei-Yugito",
+    "charId": 302
+},
+{
+    "charName": "Edo-Tensei-Yagura",
+    "charId": 303
+},
+{
+    "charName": "Edo-Tensei-Roshi",
+    "charId": 304
+},
+{
+    "charName": "Edo-Tensei-Han",
+    "charId": 305
+},
+{
+    "charName": "Edo-Tensei-Utakata",
+    "charId": 306
+},
+{
+    "charName": "Edo-Tensei-Fuu",
+    "charId": 307
+},
+{
+    "charName": "Edo-Tensei-Hashirama-(S)",
+    "charId": 308
+},
+{
+    "charName": "Edo-Tensei-Tobirama-(S)",
+    "charId": 309
+},
+{
+    "charName": "Edo-Tensei-Hiruzen",
+    "charId": 310
+},
+{
+    "charName": "Edo-Tensei-Minato",
+    "charId": 311
+},
+{
+    "charName": "Edo-Tensei-Kyuubi-Minato",
+    "charId": 312
+},
+{
+    "charName": "Edo-Tensei-Madara",
+    "charId": 313
+},
+{
+    "charName": "Kyuubi-Naruto-(S)",
+    "charId": 314
+},
+{
+    "charName": "Sennin-Kyuubi-Naruto",
+    "charId": 315
+},
+{
+    "charName": "Eternal-Mangekyou-Sasuke",
+    "charId": 316
+},
+{
+    "charName": "Byakugou-Sakura",
+    "charId": 317
+},
+{
+    "charName": "Emotional-Energy-Sai",
+    "charId": 318
+},
+{
+    "charName": "Commander-Kakashi",
+    "charId": 319
+},
+{
+    "charName": "Butterfly-Chouji-(S)",
+    "charId": 320
+},
+{
+    "charName": "Commander-Gaara",
+    "charId": 321
+},
+{
+    "charName": "Captain-Kankuro",
+    "charId": 322
+},
+{
+    "charName": "Captain-Temari",
+    "charId": 323
+},
+{
+    "charName": "Samehada-Bee",
+    "charId": 324
+},
+{
+    "charName": "White-Snake-Kabuto",
+    "charId": 325
+},
+{
+    "charName": "Sennin-Kabuto",
+    "charId": 326
+},
+{
+    "charName": "Rinnegan-Tobi",
+    "charId": 327
+},
+{
+    "charName": "Uchiha-Obito-(S)",
+    "charId": 328
+},
+{
+    "charName": "Guruguru",
+    "charId": 329
+},
+{
+    "charName": "Regenerated-Madara",
+    "charId": 330
+},
+{
+    "charName": "Juubi",
+    "charId": 331
+},
+{
+    "charName": "Rikudou-Obito",
+    "charId": 332
+},
+{
+    "charName": "Rikudou-Madara",
+    "charId": 333
+},
+{
+    "charName": "Eighth-Gate-Gai",
+    "charId": 334
+},
+{
+    "charName": "Rikudou-Naruto",
+    "charId": 335
+},
+{
+    "charName": "Rinnegan-Sasuke",
+    "charId": 336
+},
+{
+    "charName": "Dual-Mangekyou-Kakashi",
+    "charId": 337
+},
+{
+    "charName": "Rehabilitated-Obito",
+    "charId": 338
+},
+{
+    "charName": "Ootsutsuki-Kaguya",
+    "charId": 339
+},
+{
+    "charName": "Ootsutsuki-Hamura",
+    "charId": 340
+},
+{
+    "charName": "Ootsutsuki-Hagoromo",
+    "charId": 341
+},
+{
+    "charName": "Ootsutsuki-Ashura",
+    "charId": 342
+},
+{
+    "charName": "Ootsutsuki-Indra",
+    "charId": 343
+},
+{
+    "charName": "Ootsutsuki-Toneri",
+    "charId": 344
+},
+{
+    "charName": "Uzumaki-Boruto",
+    "charId": 345
+},
+{
+    "charName": "Uchiha-Sarada",
+    "charId": 346
+},
+{
+    "charName": "Mitsuki",
+    "charId": 347
+},
+{
+    "charName": "Nara-Shikadai",
+    "charId": 348
+},
+{
+    "charName": "Akimichi-Chouchou",
+    "charId": 349
+},
+{
+    "charName": "Yamanaka-Inojin",
+    "charId": 350
+},
+{
+    "charName": "Metal-Lee",
+    "charId": 351
+},
+{
+    "charName": "Yuino-Iwabee",
+    "charId": 352
+},
+{
+    "charName": "Kaminarimon-Denki",
+    "charId": 353
+},
+{
+    "charName": "Kakei-Sumire",
+    "charId": 354
+},
+{
+    "charName": "Izuno-Wasabi",
+    "charId": 355
+},
+{
+    "charName": "Suzumeno-Namida",
+    "charId": 356
+},
+{
+    "charName": "Kurogane-Tsubaki",
+    "charId": 357
+},
+{
+    "charName": "Taketori-Houki",
+    "charId": 358
+},
+{
+    "charName": "Kokubou-Renga",
+    "charId": 359
+},
+{
+    "charName": "Kuroi-Hako",
+    "charId": 360
+},
+{
+    "charName": "Shinki-Of-The-Iron-Sand",
+    "charId": 361
+},
+{
+    "charName": "Araya",
+    "charId": 362
+},
+{
+    "charName": "Yodo",
+    "charId": 363
+},
+{
+    "charName": "Yurui",
+    "charId": 364
+},
+{
+    "charName": "Tarui",
+    "charId": 365
+},
+{
+    "charName": "Toroi",
+    "charId": 366
+},
+{
+    "charName": "Uzumaki-Himawari",
+    "charId": 367
+},
+{
+    "charName": "Kawaki",
+    "charId": 368
+},
+{
+    "charName": "Sarutobi-Mirai",
+    "charId": 369
+},
+{
+    "charName": "Sarutobi-Konohamaru-(B)",
+    "charId": 370
+},
+{
+    "charName": "Ise-Udon",
+    "charId": 371
+},
+{
+    "charName": "Kazamatsuri-Moegi",
+    "charId": 372
+},
+{
+    "charName": "Hyuuga-Hanabi-(B)",
+    "charId": 373
+},
+{
+    "charName": "Mugino",
+    "charId": 374
+},
+{
+    "charName": "Touno-Katasuke",
+    "charId": 375
+},
+{
+    "charName": "Mitarashi-Anko-(B)",
+    "charId": 376
+},
+{
+    "charName": "Morino-Ibiki-(B)",
+    "charId": 377
+},
+{
+    "charName": "Hokage-Naruto",
+    "charId": 378
+},
+{
+    "charName": "Uchiha-Sasuke-(B)",
+    "charId": 379
+},
+{
+    "charName": "Uchiha-Sakura",
+    "charId": 380
+},
+{
+    "charName": "Yamanaka-Sai",
+    "charId": 381
+},
+{
+    "charName": "Hatake-Kakashi-(B)",
+    "charId": 382
+},
+{
+    "charName": "Aburame-Shino-(B)",
+    "charId": 383
+},
+{
+    "charName": "Nara-Shikamaru-(B)",
+    "charId": 384
+},
+{
+    "charName": "Akimichi-Chouji-(B)",
+    "charId": 385
+},
+{
+    "charName": "Yamanaka-Ino-(B)",
+    "charId": 386
+},
+{
+    "charName": "Rock-Lee-(B)",
+    "charId": 387
+},
+{
+    "charName": "Tenten-(B)",
+    "charId": 388
+},
+{
+    "charName": "Maito-Gai-(B)",
+    "charId": 389
+},
+{
+    "charName": "Hyuuga-Hiashi-(B)",
+    "charId": 390
+},
+{
+    "charName": "Kazekage-Gaara-(B)",
+    "charId": 391
+},
+{
+    "charName": "Kankuro-(B)",
+    "charId": 392
+},
+{
+    "charName": "Nara-Temari",
+    "charId": 393
+},
+{
+    "charName": "Mizukage-Chojuro",
+    "charId": 394
+},
+{
+    "charName": "Tsuchikage-Kurotsuchi",
+    "charId": 395
+},
+{
+    "charName": "Akatsuchi-(B)",
+    "charId": 396
+},
+{
+    "charName": "Ohnoki-(B)",
+    "charId": 397
+},
+{
+    "charName": "Raikage-Darui",
+    "charId": 398
+},
+{
+    "charName": "Akimichi-Karui",
+    "charId": 399
+},
+{
+    "charName": "Omoi-(B)",
+    "charId": 400
+},
+{
+    "charName": "Killer-Bee-(B)",
+    "charId": 401
+},
+{
+    "charName": "Log",
+    "charId": 402
+},
+{
+    "charName": "Orochimaru-(B)",
+    "charId": 403
+},
+{
+    "charName": "Hozuki-Suigetsu-(B)",
+    "charId": 404
+},
+{
+    "charName": "Juugo-(B)",
+    "charId": 405
+},
+{
+    "charName": "Karin-(B)",
+    "charId": 406
+},
+{
+    "charName": "Shin-Clone",
+    "charId": 407
+},
+{
+    "charName": "Uchiha-Shin",
+    "charId": 408
+},
+{
+    "charName": "Shojoji-Of-The-Corpse-Clone",
+    "charId": 409
+},
+{
+    "charName": "Onomichi-Hassaku",
+    "charId": 410
+},
+{
+    "charName": "Fuefuki-Kyohou",
+    "charId": 411
+},
+{
+    "charName": "Hebiichigo",
+    "charId": 412
+},
+{
+    "charName": "Oniyuzu-Ichirouta",
+    "charId": 413
+},
+{
+    "charName": "Kurosuki-Buntan",
+    "charId": 414
+},
+{
+    "charName": "Karatachi-Kagura",
+    "charId": 415
+},
+{
+    "charName": "Hoshigaki-Shizuma",
+    "charId": 416
+},
+{
+    "charName": "Samehada-Fusion-Shizuma",
+    "charId": 417
+},
+{
+    "charName": "White-Zetsu-Monster",
+    "charId": 418
+},
+{
+    "charName": "Ootsutsuki-Urashiki",
+    "charId": 419
+},
+{
+    "charName": "Chakra-Fruit-Urashiki",
+    "charId": 420
+},
+{
+    "charName": "Ootsutsuki-Kinshiki",
+    "charId": 421
+},
+{
+    "charName": "Ootsutsuki-Momoshiki",
+    "charId": 422
+},
+{
+    "charName": "Chakra-Fruit-Momoshiki",
+    "charId": 423
+},
+{
+    "charName": "Karma-Boruto",
+    "charId": 424
+},
+{
+    "charName": "Ootsutsuki-Boruto",
+    "charId": 425
+},
+{
+    "charName": "Karma-Kawaki",
+    "charId": 426
+},
+{
+    "charName": "Restored-Karma-Kawaki",
+    "charId": 427
+},
+{
+    "charName": "Sennin-Mitsuki",
+    "charId": 428
+},
+{
+    "charName": "Lightning-Suit-Denki",
+    "charId": 429
+},
+{
+    "charName": "Shigaraki-Sumire",
+    "charId": 430
+},
+{
+    "charName": "Baryon-Naruto",
+    "charId": 431
+},
+{
+    "charName": "Ao-(B)",
+    "charId": 432
+},
+{
+    "charName": "Garou",
+    "charId": 433
+},
+{
+    "charName": "Victor",
+    "charId": 434
+},
+{
+    "charName": "Deepa",
+    "charId": 435
+},
+{
+    "charName": "Delta",
+    "charId": 436
+},
+{
+    "charName": "Kashin-Koji",
+    "charId": 437
+},
+{
+    "charName": "Sennin-Koji",
+    "charId": 438
+},
+{
+    "charName": "Boro",
+    "charId": 439
+},
+{
+    "charName": "Rampage-Boro",
+    "charId": 440
+},
+{
+    "charName": "Sanzu-Amado",
+    "charId": 441
+},
+{
+    "charName": "Jigen",
+    "charId": 442
+},
+{
+    "charName": "Ootsutsuki-Isshiki",
+    "charId": 443
+},
+{
+    "charName": "Code",
+    "charId": 444
+},
+{
+    "charName": "Ada",
+    "charId": 445
+},
+{
+    "charName": "Daemon",
+    "charId": 446
+}
+
+,
   ];
   //Spring method to fade in the entire app over .5 seconds on lunach
 
@@ -731,13 +2139,13 @@ const App = () =>  {
 
           return (
             <label key={index}>
-              <input
+              <input 
                 type="radio"
                 name="rating"
                 value={ratingValue}
                 onClick={() => setTeamRating(props.team, ratingValue)}
               />
-              <GiStarShuriken
+              <GiStarShuriken key={index}
                 color={
                   ratingValue <= (hover || props.stars) ? "red" : "silver "
                 }
@@ -789,17 +2197,17 @@ const App = () =>  {
     // console.log("Img src ", teamNumber);
     window.localStorage.setItem("Your_Teams", JSON.stringify(teams));
     window.localStorage.setItem("Teams_Created", teamNumber);
-  }, [teams, teamNumber, teamStars, addTeam, setTeamStars, setTeamRating]);
+  }, [teams, teamNumber, teamStars, setTeamStars ]);
   // componentDidMount();
   //console.log("Selected Chars " + selectedChars);
   return (
     <div className="App">
       <div className="charImageHolder">
         {" "}
-        {charImages.map((charPic) => {
+        {charImages.map((charPic,index) => {
           return (
             <img
-              key={charPic.charID}
+              key={index}
               loading="lazy"
               draggable="true"
               //className={highlightChar(charPic.charID)}
@@ -840,7 +2248,7 @@ const App = () =>  {
             <p className="important">Select Background: {teamBg}</p>
 
             <br></br>
-            <button className="btn" onClick={() => addTeam()}>
+            <button className="btn add" onClick={() => addTeam()}>
               Add Team
             </button>
 
@@ -873,20 +2281,20 @@ const App = () =>  {
       </div>
       <div className="teamsHolder">
         <div className="mainTeamHolder">
-          {teams.map((team) => {
+          {teams.map((team,index) => {
             return (
               <>
                 <div
-                  key={teamCount}
+                  key={index}
                   className={"teamBox Narutobg " + team.Background}
                 >
-                  <p className="teamInfo" key={team.ID}>
+                  <p key={index} className="teamInfo" >
                     Name: {team.Name} <br />
                     <StarRating stars={team.starNum} team={team.TeamNumber} />
                     Members: {team.Members + " "}
                   </p>
                   {/* MemberID {team.memberID} */}
-                  <img
+                  <img 
                     // onClick={() => speak(team.Members)}
                     loading="lazy"
                     src={team.imgSrc[0]}
