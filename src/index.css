@@ -374,8 +374,8 @@ input[type="radio"] {
 }
 .teamsSettingsHolder {
   flex:1;
-  height: 90vh;
-   color: yellow;
+  height: 89vh;
+  color: yellow;
   background-color: rgba(38, 6, 58, 0.4);
   margin: 2px;
   padding: 2px;
@@ -394,7 +394,7 @@ input[type="radio"] {
 .mainTeamHolder {
   flex: 1;
   overflow: scroll;
-  height: 90vh;
+  height: 89vh;
   font-weight: bolder;
   margin: 2px;
   padding: 2px;
