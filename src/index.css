@@ -382,7 +382,7 @@ input[type="radio"] {
 }
 .bgsHolder{
   overflow: scroll;
-   height: 700px;
+  height: 70vh;
 }
 .teamInfo {
   font-weight: bolder;
