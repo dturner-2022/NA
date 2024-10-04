@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { GiStarShuriken } from "react-icons/gi";
 
-
 const App = () =>  {
 
   //Bgs  for teams
