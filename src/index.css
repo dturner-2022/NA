@@ -39,8 +39,8 @@ body {
 html {
   background-image: url("./site_images/Naruto55.webp");
   background-color: rgb(186, 193, 194);
- }
- .Naruto {
+}
+.Naruto {
   background-image: url("./site_images/Naruto.webp");
   background-color: rgb(239, 39, 25);
 }
@@ -299,8 +299,37 @@ html {
 .Naruto63 {
   background-image: url("./site_images/Naruto63.webp");
   background-color: rgb(32, 148, 243);
-}.Naruto64 {
+}
+.Naruto64 {
   background-image: url("./site_images/Naruto64.webp");
+  background-color: rgb(32, 148, 243);
+}
+.Naruto65 {
+  background-image: url("./site_images/Naruto65.webp");
+  background-color: rgb(32, 148, 243);
+}
+.Naruto66 {
+  background-image: url("./site_images/Naruto66.webp");
+  background-color: rgb(32, 148, 243);
+}
+.Naruto67 {
+  background-image: url("./site_images/Naruto67.webp");
+  background-color: rgb(32, 148, 243);
+}
+.Naruto68 {
+  background-image: url("./site_images/Naruto68.webp");
+  background-color: rgb(32, 148, 243);
+}
+.Naruto69 {
+  background-image: url("./site_images/Naruto69.webp");
+  background-color: rgb(32, 148, 243);
+}
+.Naruto70 {
+  background-image: url("./site_images/Naruto70.webp");
+  background-color: rgb(32, 148, 243);
+}
+.Naruto71 {
+  background-image: url("./site_images/Naruto71.webp");
   background-color: rgb(32, 148, 243);
 }
 .Narutobg {
@@ -338,9 +367,8 @@ input[type="radio"] {
 .highRated {
   border: double 1px rgb(255, 116, 23);
   transition: 0.2s;
- }
+}
 .highRated:hover {
-
   animation: 1.2s spin ease-in-out alternate infinite;
 }
 
@@ -353,7 +381,6 @@ input[type="radio"] {
     transform: scale(1.3);
   }
   60% {
-
     transform: rotatey(180deg);
   }
   100% {
@@ -373,16 +400,16 @@ input[type="radio"] {
   opacity: 1;
 }
 .teamsSettingsHolder {
-  flex:1;
+  flex: 1;
   height: 90vh;
-   color: yellow;
+  color: yellow;
   background-color: rgba(38, 6, 58, 0.4);
   margin: 2px;
   padding: 2px;
 }
-.bgsHolder{
+.bgsHolder {
   overflow: scroll;
-   height: 700px;
+  height: 700px;
 }
 .teamInfo {
   font-weight: bolder;
@@ -431,10 +458,9 @@ input {
   align-content: center;
 }
 .charImageHolder {
-    flex: 3;
-    overflow: scroll;
-    height: 90vh;
- 
+  flex: 3;
+  overflow: scroll;
+  height: 90vh;
 }
 .charImage {
   width: 65px;
@@ -456,7 +482,7 @@ input {
   text-align: center;
   font-weight: bold;
   transition: 0.5s;
-  width: 280px;
+  width: 450px;
 }
 .teamBox img {
   width: 60px;
@@ -479,13 +505,11 @@ input[type="radio"] {
 .starHolder {
 }
 
-
-
 .hide {
   opacity: 0.5;
 }
 .teamBox img:hover {
-  animation: .6s ani-nav ease-in-out alternate;
+  animation: 0.6s ani-nav ease-in-out alternate;
   border: rgb(0, 0, 0) solid 3px;
 }
 
@@ -521,13 +545,13 @@ input[type="radio"] {
   background-color: red;
   color: white;
   animation: 0.1s ani-shake ease-in-out alternate infinite;
-} 
+}
 .add:hover {
   cursor: pointer;
   background-color: rgb(32, 190, 18);
   color: white;
-  transition: .3s;
- } 
+  transition: 0.3s;
+}
 
 @keyframes ani-shake {
   0% {
@@ -570,8 +594,8 @@ input[type="radio"] {
   height: auto;
 }
 .charImage {
-   margin: 3px;
-  transition: all .2s;
+  margin: 3px;
+  transition: all 0.2s;
 }
 .fade {
   transform: translateX(0);
@@ -640,7 +664,6 @@ input[type="radio"] {
     background-color: rgb(0, 110, 13);
   } */
   .charImageHolder {
-   
     margin: 3px;
   }
   .wrapper {
