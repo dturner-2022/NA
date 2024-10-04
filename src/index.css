@@ -26,8 +26,8 @@ body {
   font-size: 15px;
 }
 .selected {
-  width: 63px;
-  height: 63px;
+  width: 67px;
+  height: 67px;
   border: solid rgb(224 19 19) 3px;
   background-color: rgb(224 19 19);
   transition: 0.2s;
@@ -610,7 +610,7 @@ input[type="radio"] {
 .charImageHolder {
   margin: 0 auto;
 }
-.teamsHolder {
+se.teamsHolder {
   margin: 0 auto;
 }
 .nameCreate {
@@ -618,37 +618,6 @@ input[type="radio"] {
   display: flex;
 }
 
-
-@media (min-width: 640px) {
-  /* *{
-    background-color: rgb(255, 106, 0);
-  } */
-  .wrapper {
-    margin: 0 auto;
-    width: 100vw;
-  }
-  .charImage {
-    height: 45px;
-}
-  .nameCreate {
-    display: block;
-  }
-  .bgSample {
-    height: 45px;
-    width: 100px;
-}
-  .teamBox {
-    width:325px;
-  }
-  .teamBox img {
-    height: 55px;
-    width: 55px;
-}
-  .charImageHolder {
-  }
-  .teamsHolder {
-  }
-}
 @media (min-width: 1024px) {
   /* *{
     background-color: rgb(170, 255, 0);
