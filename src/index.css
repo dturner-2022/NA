@@ -345,8 +345,8 @@ html {
 
 .bgSample {
   display: inline-block;
-  width: 120px;
-  height: 60px;
+  width: 160px;
+  height: 65px;
   font-size: 11px;
   font-weight: bolder;
   color: black;
@@ -356,7 +356,7 @@ html {
   transition: 0.7s;
 }
 .bgSample:hover {
-  transform: scale(2.1);
+  transform: scale(1.8);
   cursor: pointer;
   opacity: 1;
 }
@@ -463,8 +463,8 @@ input {
   height: 90vh;
 }
 .charImage {
-  width: 65px;
-  height: 65px;
+  width: 70px;
+  height: 70px;
   border: solid rgb(32, 148, 243) 2px;
   background-color: rgba(0, 107, 61, 0.9);
   transition: 0.2s;
@@ -482,11 +482,11 @@ input {
   text-align: center;
   font-weight: bold;
   transition: 0.5s;
-  width: 450px;
+  width: 420px;
 }
 .teamBox img {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border: double 3px #fcd436;
   transition: 2s;
 }
@@ -617,8 +617,7 @@ input[type="radio"] {
   flex-direction: column;
   display: flex;
 }
-.teamBox {
-}
+
 
 @media (min-width: 640px) {
   /* *{
@@ -628,9 +627,23 @@ input[type="radio"] {
     margin: 0 auto;
     width: 100vw;
   }
+  .charImage {
+    height: 45px;
+}
   .nameCreate {
     display: block;
   }
+  .bgSample {
+    height: 45px;
+    width: 100px;
+}
+  .teamBox {
+    width:325px;
+  }
+  .teamBox img {
+    height: 55px;
+    width: 55px;
+}
   .charImageHolder {
   }
   .teamsHolder {
