@@ -26,8 +26,8 @@ body {
   font-size: 15px;
 }
 .selected {
-  width: 67px;
-  height: 67px;
+  width: 65px;
+  height: 65px;
   border: solid rgb(224 19 19) 3px;
   background-color: rgb(224 19 19);
   transition: 0.2s;
@@ -345,8 +345,8 @@ html {
 
 .bgSample {
   display: inline-block;
-  width: 160px;
-  height: 65px;
+  width: 135px;
+  height: 60px;
   font-size: 11px;
   font-weight: bolder;
   color: black;
